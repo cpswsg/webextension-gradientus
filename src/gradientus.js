@@ -73,6 +73,30 @@ const themes = {
     }
   },
 
+  'dawn': {
+    images: {
+      headerURL: 'images/empty.png',
+      additional_backgrounds: ['images/dawn-right.png', 'images/dawn-left.png', 'images/dawn.png']
+    },
+
+    properties: {
+      additional_backgrounds_alignment: [ 'right top' , 'left top', 'center top' ],
+      additional_backgrounds_tiling: [ 'no-repeat', 'no-repeat', 'repeat'  ]
+    },
+
+    colors: {
+      accentcolor: 'white',
+      textcolor: 'white',
+      toolbar: 'rgba(0,0,0,0.25)',
+      toolbar_text: 'rgba(255,255,255,1)',
+      toolbar_field: 'rgba(255,255,255,1)',
+      toolbar_field_text: '#0c0c0d',
+      toolbar_top_separator: 'rgba(0,0,0,0)',
+      toolbar_bottom_separator: 'rgba(0,0,0,0.25)',
+      toolbar_vertical_separator: 'rgba(255,255,255,0.25)'
+    }
+  },
+
   'privatebrowsing': {
     images: {
       headerURL: 'images/empty.png',
@@ -106,7 +130,7 @@ async function setTheme(theme) {
     return;
   }
   currentTheme = theme;
-  // Theme each window with the appropriate theme (morning/afternoon/night/private)
+  // Theme each window with the appropriate theme (morning/afternoon/night/dawn/private)
   browser.windows.getAll().then(wins => wins.forEach(themeWindow));
 }
 
@@ -128,11 +152,14 @@ function checkTime() {
   if ((hours > 6) && (hours < 12)) {
     setTheme('morning');
   }
-  else if ((hours >= 13) && (hours < 23)) {
+  else if ((hours >= 13) && (hours < 18)) {
     setTheme('afternoon');
   }
-  else {
+  else if ((hours >= 19) || (hours <= 4)) {
     setTheme('night');
+  }
+  else {
+    setTheme('dawn');
   }
 }
 

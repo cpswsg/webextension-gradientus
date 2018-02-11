@@ -14,6 +14,8 @@ Afternoon: `#d97946` to `#6018dc`
 
 Night: `#6018dc` to `#43cbff`
 
+Dawn: `#43cbff` to `#f9d423`
+
 Private Browsing: `#221f47` to `#560083`
 
 ## Requirements
