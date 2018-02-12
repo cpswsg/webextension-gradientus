@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Gradientus",
+    "description": "Name of the extension."
+  },
+  "extensionDescription": {
+    "message": "Gradientus is a dynamic theme for Firefox Quantum.",
+    "description": "Description of the add-on."
+  }
+}
