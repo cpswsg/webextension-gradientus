@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Gradientus",
   "description": "Gradientus is a dynamic theme for Firefox Quantum",
-  "version": "1.0",
+  "version": "1.1",
   "author": "Cynthia Pereira",
   "homepage_url": "https://github.com/cynthiapereira/webextension-gradientus",
   "applications": {
