@@ -149,10 +149,10 @@ function checkTime() {
   let date = new Date();
   let hours = date.getHours();
   // zomg change
-  if ((hours > 6) && (hours < 12)) {
+  if ((hours >= 6) && (hours <= 12)) {
     setTheme('morning');
   }
-  else if ((hours >= 13) && (hours < 18)) {
+  else if ((hours >= 13) && (hours <= 18)) {
     setTheme('afternoon');
   }
   else if ((hours >= 19) || (hours <= 4)) {
