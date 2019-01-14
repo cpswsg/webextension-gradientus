@@ -6,12 +6,10 @@ const themes = {
       headerURL: 'images/empty.png',
       additional_backgrounds: ['images/morning-right.png', 'images/morning-left.png','images/morning.png']
     },
-
     properties: {
       additional_backgrounds_alignment: [ 'right top' , 'left top', 'center top' ],
       additional_backgrounds_tiling: [ 'no-repeat', 'no-repeat', 'repeat'  ]
     },
-
     colors: {
       accentcolor: 'white',
       textcolor: 'white',
@@ -30,12 +28,10 @@ const themes = {
       headerURL: 'images/empty.png',
       additional_backgrounds: ['images/afternoon-right.png', 'images/afternoon-left.png', 'images/afternoon.png']
     },
-
     properties: {
       additional_backgrounds_alignment: [ 'right top' , 'left top', 'center top' ],
       additional_backgrounds_tiling: [ 'no-repeat', 'no-repeat', 'repeat'  ]
     },
-
     colors: {
       accentcolor: 'white',
       textcolor: 'white',
@@ -54,12 +50,10 @@ const themes = {
       headerURL: 'images/empty.png',
       additional_backgrounds: ['images/night-right.png', 'images/night-left.png', 'images/night.png']
     },
-
     properties: {
       additional_backgrounds_alignment: [ 'right top' , 'left top', 'center top' ],
       additional_backgrounds_tiling: [ 'no-repeat', 'no-repeat', 'repeat'  ]
     },
-
     colors: {
       accentcolor: 'white',
       textcolor: 'white',
@@ -78,12 +72,10 @@ const themes = {
       headerURL: 'images/empty.png',
       additional_backgrounds: ['images/dawn-right.png', 'images/dawn-left.png', 'images/dawn.png']
     },
-
     properties: {
       additional_backgrounds_alignment: [ 'right top' , 'left top', 'center top' ],
       additional_backgrounds_tiling: [ 'no-repeat', 'no-repeat', 'repeat'  ]
     },
-
     colors: {
       accentcolor: 'white',
       textcolor: 'white',
@@ -102,27 +94,35 @@ const themes = {
       headerURL: 'images/empty.png',
       additional_backgrounds: ['images/private-right.png', 'images/private-left.png','images/private.png']
     },
-
     properties: {
       additional_backgrounds_alignment: [ 'right top' , 'left top', 'center top' ],
       additional_backgrounds_tiling: [ 'no-repeat', 'no-repeat', 'repeat'  ]
     },
-
     colors: {
-      accentcolor: '#9400ff',
-      textcolor: 'white',
+      accentcolor: 'rgba(148,0,255,1)',
+      textcolor: 'rgba(255,255,255,1)',
       toolbar: 'rgba(0,0,0,0.25)',
       toolbar_text: 'rgba(255,255,255,1)',
       toolbar_field: 'rgba(255,255,255,1)',
-      toolbar_field_text: '#363959',
+      toolbar_field_text: 'rgba(54,57,89,1)',
+      toolbar_field_text_focus: 'rgba(52,0,88,1)',
+      toolbar_field_border_focus: 'rgba(148,0,255,1)',
       toolbar_top_separator: 'rgba(0,0,0,0)',
       toolbar_bottom_separator: 'rgba(0,0,0,0.25)',
-      toolbar_vertical_separator: 'rgba(255,255,255,0.25)'
+      toolbar_vertical_separator: 'rgba(255,255,255,0.25)',
+      ntp_background: 'rgba(37,0,62,1)',
+      ntp_text: 'rgba(255,255,255,1)',
+      popup: 'rgba(52,0,88,1)',
+      popup_text: 'rgba(249,249,250,1)',
+      popup_border: 'rgba(22,0,37,1)',
+      sidebar: 'rgba(52,0,88,1)',
+      sidebar_text: "rgba(249,249,250,1)",
+      sidebar_border: "rgba(255,255,255,0.1)"
     }
   }
 };
 
-// Morning, Afternoon or Night
+// Morning, Afternoon, Night or Dawn
 var currentTheme = '';
 async function setTheme(theme) {
   if (currentTheme === theme) {
